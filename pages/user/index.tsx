@@ -1,22 +1,25 @@
-// import { WithDefaultLayout } from '../components/DefautLayout';
-// import { Footer } from 'antd/es/layout/layout';
 import Link from 'next/link';
-import { Title } from '../components/Title';
-import { Page } from '../types/Page';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Pagination, Navigation } from 'swiper/modules';
-import {images} from '@/pages/lib/images';
-import Image from "next/image";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import { Title } from '@/components/Title';
+import { Page } from '@/types/Page';
+import { useState } from 'react';
 
 
-const IndexPage: Page = () => {
+
+const Login: Page = () => {
+    
+        const[email, setEmail] = useState('');
+        const[password, setPassword] = useState('');
+    
+        const handleSubmit = () =>{
+            console.log("email", email);
+            console.log("password", password);
+        }
+    
+
+
     return (
         <div>
-            <Title>Home</Title>
+            <Title>Login</Title>
             <div className = "flex-1 flex relative">
                 <div className=' flex justify-around gap-16 bg-purple-500 w-full h-10'>
                     <div className='flex gap-3 items-center'>
@@ -31,7 +34,6 @@ const IndexPage: Page = () => {
                     </div>
                     <div className = "flex items-center gap-16">
                         <Link href = "">News</Link>
-                        <Link href = "/user">Login</Link>
                         <Link href = "">SignUp</Link>
                     </div>
                     
@@ -54,46 +56,65 @@ const IndexPage: Page = () => {
                     </div>
                 </div>
             </div>
-            <div className = "bg-green-500 h-screen flex justify-center bg-repeat-x" style={{backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"}}>
-                <div className ="w-full md:w-8/12 h">
-                    <div className = "">
-                        <section className='flex'>
-                        <Swiper
-                        navigation
-                        pagination = {{type: 'bullets'}}
-                        modules ={[Navigation, Pagination]}
-                        className='h-96 w-full'
-                        >
-                            {images.map((image, index ) => (
-                                <SwiperSlide key = {index}>
-                                    <div className = "flex h-full w-full items-center justify-center">
-                                        <Image src={image.src} alt={image.alt}
-                                        className =' w-full' 
-                                        />
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                        </section>
-                    <div className = "flex">
-                    <div className = "w-full flex bg-repeat-x justify-center h-20 mt-24" style={{backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_h3_line.jpg)"}}>
-                        <div className='w-1/2 flex items-center' style={{backgroundImage: "url(https://cdn.cgv.id/assets/images/h3_movie_selection_roboto.png)"}}>
+            <div className="flex min-h-screen items-center justify-center bg-gray-100 flex-col">
+  <div className="bg-white rounded-lg shadow-md px-12 py-12 w-screen landscape-form flex flex-col">
+    {/* Updated max-w-md to max-w-lg and increased px from 8 to 12 */}
+    <h1 className="text-2xl font-bold text-center mb-8">Login</h1>
+    <form onSubmit={handleSubmit} className="flex flex-wrap flex-col">
+      <div className="w-full">
+        {/* Removed md:w-1/2 md:pr-2 to make the input full width */}
+        <div className="mb-6">
+          <label htmlFor="email" className="text-gray-700 block mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          />
+        </div>
+      </div>
+      <div className="w-full">
+        {/* Removed md:w-1/2 md:pl-2 to make the input full width */}
+        <div className="mb-6">
+          <label htmlFor="password" className="text-gray-700 block mb-2">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          />
+        </div>
+      </div>
+      <div className="w-full">
+        <div className="flex justify-between items-center mb-6">
+          <button
+            type="submit"
+            className="py-2 px-4 bg-indigo-500 text-white font-bold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Login
+          </button>
+          <a href="#" className="text-sm text-gray-600 hover:underline">
+            Forgot Password?
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
-                        </div>
-                    </div>  
-                    </div>
-                    </div>
-                    
-                </div>
 
 
-            </div>
-            
-            {/* md:w-2/3  */}
-            {/* lg:w-1/2 */}
+
+          
             
         </div>
     );
 }
 
-export default IndexPage;
+export default Login;

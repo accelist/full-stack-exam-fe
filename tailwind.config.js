@@ -7,10 +7,19 @@ module.exports = {
     ],
     theme: {
         extend: {
-            colors: {
-                topbar: '#001529',
+          colors: {
+            topbar: '#001529',
+          },
+          keyframes: {
+            slide: {
+              "0%": { transform: "translateX(0)" },
+              "100%": { transform: "translateX(-100%)" },
             },
+          },
+          animation: {
+            slide: "slide 3s linear infinite",
+          },
         },
-    },
-    plugins: [],
-}
+      },
+      plugins: [],
+};
