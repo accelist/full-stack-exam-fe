@@ -23,7 +23,7 @@ const SeatSelection: React.FC = () => {
       setCinemaName(decodeURIComponent(cinema));
       setShowtime(decodeURIComponent(time));
       setDate(new Date(decodeURIComponent(dateString)));
-
+    
       const selectedMovie = moviesData.find(m => m.id === movieId);
       setMovie(selectedMovie || null);
       setLoading(false);
@@ -33,12 +33,11 @@ const SeatSelection: React.FC = () => {
   const handleSeatSelection = (seats: string[]) => {
     setSelectedSeats(seats);
   };
-
   const handleProceedToTransaction = () => {
     if (!movie || !date || !cinemaName || !showtime || selectedSeats.length === 0) {
       return;
     }
-
+  
     const transactionData = {
       movieId: movie.id,
       cinemaName,
@@ -46,9 +45,9 @@ const SeatSelection: React.FC = () => {
       date: date.toISOString(),
       selectedSeats,
     };
-
+  
     router.push({
-      pathname: `transaction/${id}`,
+      pathname: `/seat/transaction/${id}`,
       query: transactionData,
     });
   };

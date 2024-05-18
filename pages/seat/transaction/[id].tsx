@@ -6,6 +6,7 @@ import LoadingSpinner from '@/components/LoadingSpinner';
 const Transaction: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
+  const { movieId, cinemaName, showtime, date, selectedSeats } = router.query;
   const [loading, setLoading] = useState<boolean>(true);
   const [transactionData, setTransactionData] = useState<any>(null);
 
@@ -13,18 +14,17 @@ const Transaction: React.FC = () => {
     if (id) {
       const fetchData = async () => {
         try {
-          // Ubah id menjadi string
-          const transactionId = id.toString();
-
-          // Misalnya, Anda memiliki fungsi untuk mengambil data transaksi berdasarkan id
-          // Ganti fungsi ini dengan cara Anda mengambil data transaksi dari sumber data yang sesuai
-          const data = await fetchTransactionData(transactionId);
-
-          // Set data transaksi dan hentikan loading
+          const data = {
+            id: id.toString(),
+            movieId: movieId.toString(),
+            cinemaName: cinemaName.toString(),
+            showtime: showtime.toString(),
+            date: new Date(date.toString()).toLocaleDateString(),
+            selectedSeats: selectedSeats.toString().split(','), 
+          };
           setTransactionData(data);
           setLoading(false);
         } catch (error) {
-          // Tangani kesalahan jika pengambilan data gagal
           console.error('Error fetching transaction data:', error);
           setLoading(false);
         }
@@ -54,7 +54,6 @@ const Transaction: React.FC = () => {
           <p><strong>Showtime:</strong> {transactionData.showtime}</p>
           <p><strong>Date:</strong> {transactionData.date}</p>
           <p><strong>Selected Seats:</strong> {transactionData.selectedSeats.join(', ')}</p>
-          <p><strong>Total Price:</strong> {transactionData.totalPrice}</p>
         </div>
       </div>
     </div>

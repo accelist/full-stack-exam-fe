@@ -17,10 +17,9 @@ const SeatPicker: React.FC<SeatPickerProps> = ({ rows, cols, onSeatSelect }) => 
       } else {
         newSelectedSeats.add(seatId);
       }
+      onSeatSelect(Array.from(newSelectedSeats));
       return newSelectedSeats;
     });
-
-    onSeatSelect(Array.from(selectedSeats));
   };
 
   const generateSeatLabel = (row: number, col: number) => {

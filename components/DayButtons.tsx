@@ -26,7 +26,7 @@ const DayButtons: React.FC<DayButtonsProps> = ({ onDateChange }) => {
 
   const handleButtonClick = (day: Date) => {
     setSelectedDay(day);
-    onDateChange(day); // Panggil fungsi onDateChange saat tanggal dipilih
+    onDateChange(day);
   };
 
   return (

@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/NavBar';
 import MovieDetail from '@/components/MovieDetail';
-import DayButtons from '@/components/DayButtons';
 import MovieDate from '@/components/MovieDate';
 import moviesData, { Movie } from '@/functions/moviesData';
 import LoadingSpinner from '@/components/LoadingSpinner';
