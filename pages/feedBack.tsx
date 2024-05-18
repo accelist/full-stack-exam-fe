@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const membershipComponent: Page = () => {
+const feedBackPage: Page = () => {
   return (
     <div>
       <Title>Login</Title>
@@ -141,90 +141,49 @@ const membershipComponent: Page = () => {
       </div>
       </div>
       {/* ----------------- */}
-      <div className=" h-full flex justify-center bg-[#fdfcf0]">
+     <div className=" h-full flex justify-center bg-[#fdfcf0]">
         <div className="w-full md:w-8/12  ">
-            <div className="flex">
-              {/* ---- Parent untuk content */}
-              <div className="w-[980px] h-full flex flex-col mt-4 border-4 border-[#E71A0F] p-[20px] mx-auto ">
-                {/* start code here */}
-                <h4 className="font-serif font-semibold">
-                  
-                  TENTANG CJ CGV INDONESIA
-                </h4>
-                <br />
-                <h1>
-                  PT. Graha Layar Prima, Tbk juga dikenal sebagai CJ CGV Cinemas
-                  (atau sebelumnya dikenal sebagai Blitz Megaplex) adalah
-                  jaringan bioskop terkemuka di Indonesia yang didirikan pertama
-                  kali pada tahun 2004 dan mengoperasikan bioskop pertamanya di
-                  Paris Van Java, Bandung pada tahun 2006.
-                </h1>
-                <br />
-                <h1>
-                  CJ CGV memberikan pengalaman menonton lebih menyenangkan
-                  dengan kemajuan teknologi yang digunakan seperti; 3D, 4DX,
-                  Screen X, SphereX, dan Dolby Atmos, melalui beragam pilihan
-                  auditorium yaitu Regular Class, Velvet Class, Gold Class,
-                  Satin Class, Sweetbox, Sky Seat dan Private Box.
-                </h1>
-                <br />
-                <h1>
-                  Mengusung konsep Cultureplex dimana kami tidak hanya
-                  menyediakan tempat untuk menonton film, CJ CGV* CINEMAS turut
-                  memberi ruang bagi beragam komunitas di sekitar lokasi CGV
-                  untuk melakukan aktivitas kesenian, seperti pertunjukan musik
-                  dan tarian, pertemuan corporate, gathering, dan memberikan
-                  wadah kreasi serta mengekspresikan diri untuk masyarakat
-                  seluruh Indonesia.
-                </h1>
-                <br />
-                <h1>
-                  Dengan kapasitas layar yang terus bertambah, CJ CGV memutarkan
-                  berbagai macam jenis film dari berbagai Negara seperti India,
-                  Korea, Jepang, Thailand dan tentunya konten lokal dari dalam
-                  negeri. CJ CGV Indonesia menayangkan berbagai pilihan film
-                  dari rumah produksi internasional dan lokal, serta pembuat
-                  film independen dan studio anime. Dengan tayangan dari
-                  berbagai Negara seperti India, Korea, Thailand, Jepang dan
-                  tentunya konten dalam negeri, auditorium CJ CGV juga
-                  dilengkapi dengan teknologi audio visual berkualitas tinggi
-                  dengan hasil resonansi suara yang jernih.
-                </h1>
-                <br />
-                <h1>
-                  Hingga kini CJ CGV telah mengoperasikan 71 bioskop dan 408
-                  layar yang tersebar di lebih dari 30 kota di seluruh
-                  Indonesia, dan akan terus melebarkan jaringan baru untuk
-                  memperkuat positioning perusahaan dan menjangkau masyarakat
-                  dengan lebih luas.
-                </h1>
-                <br />
-                <br />
-                <h1>
-                  Website: www.cgv.id | Facebook: CGV Cinemas Indonesia |
-                </h1>
-                <h1>
-                  Twitter: @CGV_ID | Instagram: @CGV.ID | LINE: CGV Cinemas
-                </h1>
-              </div>
+          <div className="flex flex-col w-[980px] mx-auto">
+            {/* ---- Parent untuk content */}
+            <div className="w-[980px] h-full flex flex-col mt-4 border-4 border-[#E71A0F] p-[20px] mx-auto ">
+              {/* start code here */}
+              <h4 className="font-semibold">
+                Feedback 🙏:
+              </h4>
+              <br />
+              <h1 className="mt-2 font-extralight">
+                Call CenterYou can leave comments or feedback to our service by directly email us at support@cgv.id. We value every feedback we received. And once in a while will have promotionnal gift to our eager customer. Grateful for every seconds you give us thoughts!
+              </h1>
             </div>
-            <div className = "flex  w-full gap-5 mt-5 ">
-                <Link href = "../membership">
-                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
-                </Link>
-                <Link href = "../membership">
-                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
-                </Link>
-                <Link href = "../membership">
-                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
-                </Link>
+            <div className="flex items-center justify-between mt-5 gap-10">
+              <Link href="../membership">
+                <img
+                  src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg"
+                  alt=""
+                  className="flex border-4 p-1 border-black"
+                />
+              </Link>
+              <Link href="../membership">
+                <img
+                  src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg"
+                  alt=""
+                  className="flex border-4 p-1 border-black"
+                />
+              </Link>
+              <Link href="../membership">
+                <img
+                  src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg"
+                  alt=""
+                  className="flex border-4 p-1 border-black"
+                />
+              </Link>
             </div>
+          </div>
           <div>
             <div className=" h-20 mt-4 bg-lime"></div>
           </div>
-
         </div>
-      </div>
+      </div> 
       {/* ----------------- */}
 
       <div className=" bg-[#fdfcf0] flex flex-col ">
@@ -309,7 +268,7 @@ const membershipComponent: Page = () => {
                 </div >
                 </div>
                 
-                 <div className = "h-28 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
+                 <div className = "h-20 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
 
                  </div>
             </div>
@@ -317,4 +276,4 @@ const membershipComponent: Page = () => {
   );
 };
 
-export default membershipComponent;
+export default feedBackPage;

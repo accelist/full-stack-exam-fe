@@ -258,7 +258,7 @@ const cinemaComponent: Page = () => {
                 </div >
                 </div>
                 
-                 <div className = "h-28 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
+                 <div className = "h-20 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
 
                  </div>
             </div>

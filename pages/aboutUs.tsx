@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const membershipComponent: Page = () => {
+const AboutUs: Page = () => {
   return (
     <div>
       <Title>Login</Title>
@@ -147,7 +147,7 @@ const membershipComponent: Page = () => {
               {/* ---- Parent untuk content */}
               <div className="w-[980px] h-full flex flex-col mt-4 border-4 border-[#E71A0F] p-[20px] mx-auto ">
                 {/* start code here */}
-                <h4 className="font-serif font-semibold">
+                <h4 className="font-semibold">
                   
                   TENTANG CJ CGV INDONESIA
                 </h4>
@@ -309,7 +309,7 @@ const membershipComponent: Page = () => {
                 </div >
                 </div>
                 
-                 <div className = "h-28 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
+                 <div className = "h-20 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
 
                  </div>
             </div>
@@ -317,4 +317,4 @@ const membershipComponent: Page = () => {
   );
 };
 
-export default membershipComponent;
+export default AboutUs;

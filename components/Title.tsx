@@ -6,9 +6,8 @@ export const Title: React.FC<{
 }> = () => {
     return (
         <Head>
-            <title key="title">{'No. 1 Cultureplex in Indonesia'}</title>
+            <title key="title">{'No.1 Cultureplex in Indonesia'}</title>
         </Head>
     );
 }
-
 // { children }

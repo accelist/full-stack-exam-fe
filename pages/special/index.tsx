@@ -192,14 +192,11 @@ const SpecialPage: Page = () => {
                     <img src="	https://cdn.cgv.id/uploads_v2/special_audi/web/thumbnails/2402/SA202402170700368566.png" alt="" className = "mx-auto transition-transform transform hover:scale-90 duration-300 ease-in-out" />
                     <h4 className="text-[#E71A0F] font-bold">Private Box</h4>
                   </li>
-
-
                 </ul>
               </div>
             </div>
           
           </div>
-          
         <div>
             <div className = " h-96 mt-4">
             </div>
@@ -293,7 +290,7 @@ const SpecialPage: Page = () => {
                 </div >
                 </div>
                 
-                 <div className = "h-28 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
+                 <div className = "h-20 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
 
                  </div>
             </div>

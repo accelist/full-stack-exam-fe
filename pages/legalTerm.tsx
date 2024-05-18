@@ -8,10 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const membershipComponent: Page = () => {
+const legalTermPage: Page = () => {
   return (
     <div>
-      <Title>Login</Title>
+      <Title>kmkms</Title>
       <div className="flex-1 flex relative">
         <div
           className=" flex justify-around gap-16 w-full h-10"
@@ -147,7 +147,7 @@ const membershipComponent: Page = () => {
             {/* ---- Parent untuk content */}
             <div className="w-[980px] h-full flex flex-col mt-4 border-4 border-[#E71A0F] p-[20px] mx-auto ">
               {/* start code here */}
-              <h4 className="font-serif font-semibold">
+              <h4 className="font-semibold">
                 TENTANG CJ CGV INDONESIA
               </h4>
               <h1 className="mt-2 font-extralight">
@@ -465,10 +465,10 @@ const membershipComponent: Page = () => {
           </div>
         </div>
 
-        <div className="h-28 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]"></div>
+        <div className="h-20 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]"></div>
       </div>
     </div>
   );
 };
 
-export default membershipComponent;
+export default legalTermPage;

@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const membershipComponent: Page = () => {
+const CareerPage: Page = () => {
   return (
     <div>
       <Title>Login</Title>
@@ -308,7 +308,7 @@ const membershipComponent: Page = () => {
                 </div >
                 </div>
                 
-                 <div className = "h-28 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
+                 <div className = "h-20 w-full bg-[url('https://cdn.cgv.id/assets/global/img/top-banner-default.jpg')]">
 
                  </div>
             </div>
@@ -316,4 +316,4 @@ const membershipComponent: Page = () => {
   );
 };
 
-export default membershipComponent;
+export default CareerPage;
