@@ -3,10 +3,11 @@ import Head from 'next/head';
 
 export const Title: React.FC<{
     children: string | number
-}> = ({ children }) => {
+}> = ({children}) => {
     return (
         <Head>
-            <title key="title">{children.toString() + '- Accelist Next.js Starter'}</title>
+            <title key="title">{children.toString()}</title>
         </Head>
     );
 }
+// { children }

@@ -1,24 +1,23 @@
 // import { WithDefaultLayout } from '../components/DefautLayout';
 // import { Footer } from 'antd/es/layout/layout';
 import Link from "next/link";
-import { Title } from "../components/Title";
-import { Page } from "../types/Page";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import { images } from "@/pages/lib/images";
-import Image from "next/image";
+import { Title } from "@/components/Title";
+import { Page } from "@/types/Page";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import CarouselControlsInside from "@/components/carousel";
 
-const IndexPage: Page = () => {
+
+const PromotionPage: Page = () => {
   return (
     <div>
-      <Title>No. 1 Cultureplex in Indonesia - CGV Cinema</Title>
-      <div className="flex-1 flex relative" style ={{backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"}}>
-        <div className=" flex justify-around gap-16  w-full h-10 bg-[#fdfcf0]">
+      <Title>Promo Seru Terbaru! - CGV Cinema</Title>
+      <div className="flex-1 flex relative">
+        <div
+          className=" flex justify-around gap-16 w-full h-10"
+          style={{ background: "#fdfcf0" }}
+        >
           <div className="flex gap-3 items-center">
             <Link href="https://www.facebook.com/CGV.ID" target="_blank">
               <img
@@ -120,7 +119,7 @@ const IndexPage: Page = () => {
             className="w-1/2 mx-auto mb-2 "
           />
           <div className="flex gap-4">
-            <Link href="../movies">
+          <Link href="../movies">
               <li className="list-none font-bold font-sans">MOVIES</li>
             </Link>
             <Link href="../cinema">
@@ -142,72 +141,11 @@ const IndexPage: Page = () => {
         </div>
       </div>
       </div>
-      <div
-        className=" h-full flex justify-center bg-repeat-x bg-[#fdfcf0]"
-        style={{
-          backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"
-          // backgroundImage:
-          //   "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)",
-        }}
-      >
-        <div className="w-full md:w-8/12" style={{}}>
-          <div className="">
-            <section className="flex w-[720px] mx-auto">
-              <Swiper
-                navigation
-                pagination={{ type: "bullets" }}
-                modules={[Navigation, Pagination]}
-                className="h-[450px]"
-              >
-                {images.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="flex h-full w-full items-center justify-center ">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        className=""
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </section>
-            <div className="flex">
-              <div
-                className="w-full flex justify-center h-20 mt-3 border-t-4 border-t-black"  
-              >
-                <h1 className = "font-extrabold text-2xl">MOVIE SELECTION</h1>
-                
-              </div>
-            </div>
-              <CarouselControlsInside/>
-          </div>
-          <div className=" flex justify-evenly mt-16 flex-col items-center gap-5 border-t-4 border-t-black w-full ">
-            <h1 className = "font-extrabold items-center text-2xl">CGV UPDATE</h1>
-                <ul className = "flex gap-10 justify-evenly">
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404291657431685_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2405/PR202405171125514961_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2401/PR202401242010086487_thumb.jpg" alt="" />
-                    </li>
-                </ul>
-          </div>
-        <div>
-            <div className = " h-96 mt-10 border-t-4 border-t-black">
-            </div>
         
-        </div>
-        </div>
-      </div>
-                {/* ---- footer */}
-            <div className=" bg-[#fdfcf0] flex flex-col ">
+           
+       
+
+      <div className=" bg-[#fdfcf0] flex flex-col ">
                 <div className="h-16 w-full flex items-center ">
                     <div className = "items-center flex flex-1 justify-evenly border-t-4 border-t-black  border-b-4 border-b-black">
                     <ul className = "flex gap-3">
@@ -250,7 +188,7 @@ const IndexPage: Page = () => {
                 <div className = " h-24 flex flex-col w-full gap-3 " >
 
                 <ul className = "flex  mt-1 ">
-                <Link href="/aboutUs" className = "ms-1 text-[#e71a0f] text-sm" >
+                        <Link href="/aboutUs" className = "ms-1 text-[#e71a0f] text-sm" >
                             About Us
                         </Link>
                         <p className="ms-5 text-sm"> | </p>
@@ -293,10 +231,10 @@ const IndexPage: Page = () => {
 
                  </div>
             </div>
-            {/* ----- footer */}
-        
+                    
+    
     </div>
   );
 };
 
-export default IndexPage;
+export default PromotionPage;

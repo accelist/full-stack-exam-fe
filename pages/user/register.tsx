@@ -1,24 +1,35 @@
-// import { WithDefaultLayout } from '../components/DefautLayout';
-// import { Footer } from 'antd/es/layout/layout';
 import Link from "next/link";
-import { Title } from "../components/Title";
-import { Page } from "../types/Page";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import { images } from "@/pages/lib/images";
-import Image from "next/image";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import CarouselControlsInside from "@/components/carousel";
+import { Title } from "@/components/Title";
+import { Page } from "@/types/Page";
+import { useState } from "react";
 
-const IndexPage: Page = () => {
+const RegisterPage: Page = () => {
+  const [city, setCity] = useState("");
+  const [cinema, setCinema] = useState("");
+
+
+  const cities = [
+    "Jakarta",
+    "Bandung",
+    "Surabaya",
+    // Add more cities as needed
+  ];
+
+  const cinemas = {
+    Jakarta: ["CGV Grand Indonesia", "CGV Pacific Place"],
+    Bandung: ["CGV Paris Van Java", "CGV 23 Paskal"],
+    Surabaya: ["CGV Marvell City", "CGV BG Junction"],
+    // Add more locations as needed
+  };
+
   return (
     <div>
-      <Title>No. 1 Cultureplex in Indonesia - CGV Cinema</Title>
-      <div className="flex-1 flex relative" style ={{backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"}}>
-        <div className=" flex justify-around gap-16  w-full h-10 bg-[#fdfcf0]">
+      <Title>Registrasi - CGV Cinema</Title>
+      <div className="flex-1 flex relative">
+        <div
+          className=" flex justify-around gap-16 w-full h-10"
+          style={{ background: "#fdfcf0" }}
+        >
           <div className="flex gap-3 items-center">
             <Link href="https://www.facebook.com/CGV.ID" target="_blank">
               <img
@@ -92,8 +103,7 @@ const IndexPage: Page = () => {
           </div>
           <div className="flex items-center gap-16 font-serif font-bold">
             <Link href="../news">News</Link>
-            <Link href="/user">Login</Link>
-            <Link href="/user/register">SignUp</Link>
+            <Link href="../user">Login</Link>
           </div>
         </div>
       </div>
@@ -142,72 +152,88 @@ const IndexPage: Page = () => {
         </div>
       </div>
       </div>
-      <div
-        className=" h-full flex justify-center bg-repeat-x bg-[#fdfcf0]"
-        style={{
-          backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"
-          // backgroundImage:
-          //   "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)",
-        }}
+      <div className="flex items-center justify-center  flex-col min-h-[650px] h-[850px] border-t-4" style={{background: "#fdfcf0"}}>
+        <div className="shadow-md px-12 py-12 landscape-form flex flex-col h-[700px] w-[980px] relative border-spacing-96" style={{background: "#f0f0e1"}}>
+          <div className = "h-16 w-28 absolute left-0 top-0 -translate-y-full flex justify-center items-center rounded-t-lg  bg-red-700">
+            <Link href="../user" className = "text-white ">Login</Link>  
+          </div>
+          <div className = "h-16 w-28 absolute left-32 top-0 -translate-y-full flex justify-center items-center rounded-t-lg" style={{background: "#f0f0e1"}}>
+            <Link href="" className = "text-red-700">SignUp</Link>  
+          </div>
+          <div className = "gap-8 flex flex-col">
+          <h5 className="text-[#e30613] font-bold text-2xl">
+            CREATE YOUR ACCOUNT
+          </h5>
+            <p className = "font-sans">Please provide accurate information so we may identify you at the Box Office.</p>
+          </div>
+          <form className="flex flex-col h-[540px] min-h-[250px] w-[918px] mt-8">
+            <div className="flex flex-1">
+            <div className="mb-6 flex flex-col space-y-4">
+      <h1>Preferred Cinema</h1>
+      <select
+        id="city"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+        className="float-center w-full px-3 py-2 rounded-md border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+        style={{ height: "48px", lineHeight: "48px" }}
+        required
       >
-        <div className="w-full md:w-8/12" style={{}}>
-          <div className="">
-            <section className="flex w-[720px] mx-auto">
-              <Swiper
-                navigation
-                pagination={{ type: "bullets" }}
-                modules={[Navigation, Pagination]}
-                className="h-[450px]"
-              >
-                {images.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="flex h-full w-full items-center justify-center ">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        className=""
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </section>
-            <div className="flex">
-              <div
-                className="w-full flex justify-center h-20 mt-3 border-t-4 border-t-black"  
-              >
-                <h1 className = "font-extrabold text-2xl">MOVIE SELECTION</h1>
-                
+        <option value="" disabled>
+          Select your city
+        </option>
+        {cities.map((city) => (
+          <option key={city} value={city}>
+            {city}
+          </option>
+        ))}
+      </select>
+
+      <select
+        id="cinema"
+        value={cinema}
+        onChange={(e) => setCinema(e.target.value)}
+        className="float-center w-full px-3 py-2 rounded-md border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+        style={{ height: "48px", lineHeight: "48px" }}
+        required
+        disabled={!city}
+      >
+        <option value="" disabled>
+          Select your preferred cinema
+        </option>
+        {city &&
+          cinemas[city].map((cinema) => (
+            <option key={cinema} value={cinema}>
+              {cinema}
+            </option>
+          ))}
+      </select>
+    </div>
+              <div>
+
               </div>
             </div>
-              <CarouselControlsInside/>
-          </div>
-          <div className=" flex justify-evenly mt-16 flex-col items-center gap-5 border-t-4 border-t-black w-full ">
-            <h1 className = "font-extrabold items-center text-2xl">CGV UPDATE</h1>
-                <ul className = "flex gap-10 justify-evenly">
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404291657431685_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2405/PR202405171125514961_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2401/PR202401242010086487_thumb.jpg" alt="" />
-                    </li>
-                </ul>
-          </div>
-        <div>
-            <div className = " h-96 mt-10 border-t-4 border-t-black">
+            <div className="w-full">
+              <div className="mb-6">
+              </div>
             </div>
-        
-        </div>
+            <div className="w-full">
+              <div className="flex flex-col items-center mb-6 gap-4">
+                <button
+                  type="submit"
+                  className="py-2 px-20 bg-red-500 w-full text-white font-bold rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                >
+                  Login
+                </button>
+                <a href="#" className="text-sm text-gray-600 hover:underline">
+                  Forgot Password?
+                </a>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-                {/* ---- footer */}
-            <div className=" bg-[#fdfcf0] flex flex-col ">
+
+      <div className=" bg-[#fdfcf0] flex flex-col ">
                 <div className="h-16 w-full flex items-center ">
                     <div className = "items-center flex flex-1 justify-evenly border-t-4 border-t-black  border-b-4 border-b-black">
                     <ul className = "flex gap-3">
@@ -293,10 +319,8 @@ const IndexPage: Page = () => {
 
                  </div>
             </div>
-            {/* ----- footer */}
-        
     </div>
   );
 };
 
-export default IndexPage;
+export default RegisterPage;

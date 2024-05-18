@@ -1,24 +1,22 @@
 // import { WithDefaultLayout } from '../components/DefautLayout';
 // import { Footer } from 'antd/es/layout/layout';
 import Link from "next/link";
-import { Title } from "../components/Title";
-import { Page } from "../types/Page";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import { images } from "@/pages/lib/images";
-import Image from "next/image";
+import { Title } from "@/components/Title";
+import { Page } from "@/types/Page";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import CarouselControlsInside from "@/components/carousel";
 
-const IndexPage: Page = () => {
+const CareerPage: Page = () => {
   return (
     <div>
-      <Title>No. 1 Cultureplex in Indonesia - CGV Cinema</Title>
-      <div className="flex-1 flex relative" style ={{backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"}}>
-        <div className=" flex justify-around gap-16  w-full h-10 bg-[#fdfcf0]">
+      <Title>Careers - CGV Cinema</Title>
+      <div className="flex-1 flex relative">
+        <div
+          className=" flex justify-around gap-16 w-full h-10"
+          style={{ background: "#fdfcf0" }}
+        >
           <div className="flex gap-3 items-center">
             <Link href="https://www.facebook.com/CGV.ID" target="_blank">
               <img
@@ -98,19 +96,19 @@ const IndexPage: Page = () => {
         </div>
       </div>
       <div
-        className="flex bg-repeat-x h-32 items-center justify-center gap-4"
+        className="flex bg-repeat-x h-32 items-center justify-center gap-4 "
         style={{
           backgroundImage: "url(https://cdn.cgv.id/assets/images/bg-top.png)",
         }}
       >
         <div className = "flex mr-28 gap-8">
-        <div className="flex w-36 flex-col justify-center">
+        <div className="flex w-36 flex-col justify-center ">
           <Link href="./">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/CGV_logo.svg/1200px-CGV_logo.svg.png"
               alt=""
               className=" w-full mr-44"
-            />{" "}
+            />
           </Link>
         </div>
         <div className="flex flex-col justify-center mb-5">
@@ -142,72 +140,125 @@ const IndexPage: Page = () => {
         </div>
       </div>
       </div>
-      <div
-        className=" h-full flex justify-center bg-repeat-x bg-[#fdfcf0]"
-        style={{
-          backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"
-          // backgroundImage:
-          //   "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)",
-        }}
-      >
-        <div className="w-full md:w-8/12" style={{}}>
-          <div className="">
-            <section className="flex w-[720px] mx-auto">
-              <Swiper
-                navigation
-                pagination={{ type: "bullets" }}
-                modules={[Navigation, Pagination]}
-                className="h-[450px]"
-              >
-                {images.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="flex h-full w-full items-center justify-center ">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        className=""
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </section>
-            <div className="flex">
-              <div
-                className="w-full flex justify-center h-20 mt-3 border-t-4 border-t-black"  
-              >
-                <h1 className = "font-extrabold text-2xl">MOVIE SELECTION</h1>
-                
+      {/* ----------------- */}
+      <div className=" h-full flex justify-center bg-[#fdfcf0]">
+        <div className="w-full md:w-8/12  ">
+            <div className="flex flex-col w-[980px] mx-auto gap-10">
+              {/* ---- Parent untuk content */}
+              <div className="w-[980px] h-full flex flex-col mt-4 border-4 border-[#E71A0F] p-[20px] mx-auto ">
+                {/* start code here */}
+                <h4 className="font-semibold">
+                  WHO ARE WE ?
+                </h4>
+                <br />
+                <h1>
+                Welcome to CGV CINEMAS. In CGV CINEMAS the terms of &apos;Auditorium&apos; is what they call &quot;Theatre&quot; somewhere else, and it is where we screen all of our movies on the largest screens in Indonesia. CGV CINEMAS presents the concept of &quot;Cultureplex&quot;, where it brings entertainment by combining film, music, fine dining, and meeting point all in one place: The CGV CINEMAS.
+                </h1>
+                <br />
+                <h1>
+                All of the CGV staffs proudly call themselves &quot;stars&quot; because of their unique differences. The difference lays on the costumer oriented services. Each stars has the fresh and energetic bearings in giving services with warm and genial approaches, so each costumers can truly feel the amazing experience during their visit to CGV CINEMAS. All of these are based on CGV CINEMAS vision, &quot;to be the ultimate choice for the most unforgettable experiences&quot;.
+                </h1>
+                <br />
+                <h1>
+                Based on the vision, CGV CINEMAS is running a mission:
+                </h1>
+                <h1>
+1. to provide the most innovative, fun and enjoyable entertainment experiences to all our customers, and
+
+                </h1>
+                <h1>
+2. to create growth opportunities to all our stakeholders, employees, suppliers and community.
+                </h1>
+                <br />
+                <h1>
+                Do you have what it takes to be a stars? If you are interested in joining this marvelous team delivering the unforgettable experience in entertainment, fill the form and send it to us.
+                </h1>
+                <br />
+                <h1>
+                CAREER OPPORTUNITIES
+                </h1>
+                <br />
+                <ol className="ml-6 list-upper-alpha font-[600]">
+                <li>
+                Finance & Accounting
+                </li>
+                <li>
+                Purchasing
+                </li>
+                <li>
+                Legal & Compliance
+                </li>
+                <li>
+                IT Management
+                </li>
+                <li>
+                Technical Team
+                </li>
+                <ol className = "list-lower-alpha ms-6 italic">
+                  <li >Movie Engineer Support</li>
+                </ol>
+                <li>
+                Operations
+                </li>
+                <ol className = "list-lower-alpha ms-6 italic">
+                  <li>
+                    Cinema Supevisor
+                  </li>
+                  <li>
+                    Assistant Cinema Manager
+                  </li>
+                  <li>
+                    Operations Accounting
+                  </li>
+                  <li>
+                    Learning and Development
+                  </li>
+                </ol>
+                <li>
+                  Food & Beverages
+                </li>
+                <li>
+                Content & Movie Programming
+                </li>
+                <li>
+                Safety Management
+                </li>
+                <ol className = "italic list-lower-alpha ms-6">
+                  <li>
+                    Hygiene and Sanitation
+                  </li>
+                </ol>
+                <li>Marketing</li>
+                <li>Brand Identity Team</li>
+                <li>Advertising Sales & Planning</li>
+                <li>Site Development</li>
+                <li>Project & Construction</li>
+                <li>Design & Layout</li>
+                <li>Finance & Accounting</li>
+                <li>Human Resources</li>
+              </ol>
               </div>
+            <div className = "flex items-center justify-between">
+                <Link href = "../membership">
+                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
+                </Link>
+                <Link href = "../membership">
+                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
+                </Link>
+                <Link href = "../membership">
+                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
+                </Link>
             </div>
-              <CarouselControlsInside/>
-          </div>
-          <div className=" flex justify-evenly mt-16 flex-col items-center gap-5 border-t-4 border-t-black w-full ">
-            <h1 className = "font-extrabold items-center text-2xl">CGV UPDATE</h1>
-                <ul className = "flex gap-10 justify-evenly">
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404291657431685_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2405/PR202405171125514961_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2401/PR202401242010086487_thumb.jpg" alt="" />
-                    </li>
-                </ul>
-          </div>
-        <div>
-            <div className = " h-96 mt-10 border-t-4 border-t-black">
             </div>
-        
-        </div>
+          <div>
+            <div className=" h-20 mt-4 bg-lime"></div>
+          </div>
+
         </div>
       </div>
-                {/* ---- footer */}
-            <div className=" bg-[#fdfcf0] flex flex-col ">
+      {/* ----------------- */}
+
+      <div className=" bg-[#fdfcf0] flex flex-col ">
                 <div className="h-16 w-full flex items-center ">
                     <div className = "items-center flex flex-1 justify-evenly border-t-4 border-t-black  border-b-4 border-b-black">
                     <ul className = "flex gap-3">
@@ -242,7 +293,6 @@ const IndexPage: Page = () => {
                             <Link href ="/">PRIVATEBOX</Link>
                             </li>
                         </ul>
-
                     </div>
         
                 </div>
@@ -250,7 +300,7 @@ const IndexPage: Page = () => {
                 <div className = " h-24 flex flex-col w-full gap-3 " >
 
                 <ul className = "flex  mt-1 ">
-                <Link href="/aboutUs" className = "ms-1 text-[#e71a0f] text-sm" >
+                        <Link href="/aboutUs" className = "ms-1 text-[#e71a0f] text-sm" >
                             About Us
                         </Link>
                         <p className="ms-5 text-sm"> | </p>
@@ -293,10 +343,8 @@ const IndexPage: Page = () => {
 
                  </div>
             </div>
-            {/* ----- footer */}
-        
     </div>
   );
 };
 
-export default IndexPage;
+export default CareerPage;

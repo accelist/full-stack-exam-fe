@@ -8,3 +8,10 @@
 #nprogress .bar {
     background: limegreen !important;
 }
+
+.list-lower-alpha {
+    list-style-type: lower-alpha;
+  }
+.list-upper-alpha {
+    list-style-type: upper-alpha;
+}

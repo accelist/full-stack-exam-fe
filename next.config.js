@@ -50,6 +50,14 @@ const nextConfig = {
     // visible only by server-side Next.js (secrets)
     // if accessing variables required in browser-side code, use getServerSideProps
     // https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'www.google.com'
+            },
+        ],
+    },
     serverRuntimeConfig: require('./appsettings'),
     productionBrowserSourceMaps: true,
     reactStrictMode: true,
