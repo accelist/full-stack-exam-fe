@@ -1,22 +1,22 @@
-import { Title } from '../components/Title';
-import { Page } from '../types/Page';
+import React from 'react';
+import NowPlayingList from '../components/NowPlayingList';
+import ComingSoonList from '../components/ComingSoonList';
 import NavBar from '../components/NavBar';
 import SocSignBar from '../components/SocSignBar';
-import MovieSelectionList from '../components/MovieSelection';
 import styles from './IndexPage.module.css';
 
-const IndexPage: Page = () => {
+const MoviesPage: React.FC = () => {
     return (
         <div>
-            <Title>Home</Title>
             <div className={styles['centerSection']}>
                 <SocSignBar />
                 <h1>CULTUREPLEX</h1>
                 <NavBar />
             </div>
-            <MovieSelectionList />
+            <NowPlayingList />
+            <ComingSoonList />
         </div>
     );
-}
+};
 
-export default IndexPage;
+export default MoviesPage;
