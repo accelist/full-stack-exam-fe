@@ -22,6 +22,8 @@ interface directorResponse {
 const MoviesAdminPage: Page = () => {
     const [directors, setDirectors] = useState<directorResponse[] | null>(null);
     const [genres, setGenres] = useState<genreResponse[] | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
     useEffect(() => {
         async function fetchDirectorAndGenre() {
@@ -78,6 +80,8 @@ const MoviesAdminPage: Page = () => {
                 throw new Error('Network response was not ok');
             }
 
+            setIsModalOpen(true);
+
             const result = await response.json();
             console.log('Success:', result);
         } catch (error) {
@@ -85,10 +89,40 @@ const MoviesAdminPage: Page = () => {
         }
     };
 
+    const closeModal = () => {
+        setIsModalOpen(false);
+        form.reset({
+            // Set default values for the form fields
+            movieTitle: "",
+            directorId: "",
+            genreId: "",
+            censorRating: "",
+            language: "",
+            subtitle: "",
+            duration: "",
+            synopsis: "",
+            posterUrl: "",
+            trailerUrl: "",
+            isShowing: false,
+        });
+    };
+
     const admin = {
         createdBy: "Sam Malik",
         updatedBy: "Sam Malik"
     }
+
+    const Modal = () => (
+        <div className="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+                <h2 className="text-lg font-semibold text-gray-800 mb-4">Success!</h2>
+                <p className="text-gray-700">Movie has been created successfully.</p>
+                <button onClick={closeModal} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600">
+                    Close
+                </button>
+            </div>
+        </div>
+    );
 
     return (
         <div className="flex justify-center items-center bg-gray-50 w-full overflow-y-scroll h-full">
@@ -299,6 +333,7 @@ const MoviesAdminPage: Page = () => {
                     </form>
                 </Form>
             </div>
+            {isModalOpen && <Modal />}
         </div>
     );
 }

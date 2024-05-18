@@ -16,6 +16,7 @@ import { z } from "zod";
 import { loginSchema } from "@/schemas/loginSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const LoginPage: Page = () => {
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -29,6 +30,8 @@ const LoginPage: Page = () => {
   const onSubmit = (values: z.infer<typeof loginSchema>) => {
     console.log(values);
   };
+
+  const router = useRouter();
 
   return (
     <div className="mt-10 w-[980px] min-h-[450px] mx-auto">
@@ -95,6 +98,7 @@ const LoginPage: Page = () => {
               </Button>
             </form>
           </Form>
+          <Button onClick={() => router.push('/admin/dashboard')}>Go To Admin Page</Button>
         </div>
       </div>
     </div>

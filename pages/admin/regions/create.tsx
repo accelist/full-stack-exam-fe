@@ -1,14 +1,17 @@
-import { WithAdminLayout } from '@/components/AdminLayout'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Page } from '@/types/Page'
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import { useState } from 'react';
+import { WithAdminLayout } from '@/components/AdminLayout';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Page } from '@/types/Page';
+import { useForm } from 'react-hook-form';
 import { z } from "zod";
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 const CreateRegionPage: Page = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [, setFormSubmitted] = useState(false);
+
     const regionSchema = z.object({
         regionName: z.string().min(1, "Region name is required"),
     });
@@ -38,17 +41,35 @@ const CreateRegionPage: Page = () => {
                 throw new Error('Network response was not ok');
             }
 
+            setIsModalOpen(true);
+            setFormSubmitted(true);
+
             const result = await response.json();
             console.log('Success:', result);
+
+            form.reset();
         } catch (error) {
             console.error('Error occurred during submission:', error);
         }
     }
 
+
     const admin = {
         createdBy: "Sam Malik",
         updatedBy: "Sam Malik"
     }
+
+    const Modal = () => (
+        <div className="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+                <h2 className="text-lg font-semibold text-gray-800 mb-4">Success!</h2>
+                <p className="text-gray-700">Your region has been created successfully.</p>
+                <button onClick={() => setIsModalOpen(false)} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600">
+                    Close
+                </button>
+            </div>
+        </div>
+    );
 
     return (
         <div className='w-full h-screen flex justify-center items-center'>
@@ -79,6 +100,7 @@ const CreateRegionPage: Page = () => {
                     </form>
                 </Form>
             </div>
+            {isModalOpen && <Modal />}
         </div>
     )
 }

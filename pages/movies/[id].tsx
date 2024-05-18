@@ -39,7 +39,7 @@ const MovieDetail = () => {
         };
 
         fetchMovieDetail();
-    }, []);
+    }, [id]);
 
     if (loading) {
         return <div>Loading...</div>;
