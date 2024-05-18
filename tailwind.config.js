@@ -7,6 +7,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+          fontFamily: {
+            sans: ['verdana',  'sans-serif'],
+          },
           colors: {
             topbar: '#001529',
           },

@@ -1,4 +1,3 @@
-
 // import { WithDefaultLayout } from '../components/DefautLayout';
 // import { Footer } from 'antd/es/layout/layout';
 import Link from "next/link";
@@ -9,8 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-
-const concessionComponent: Page = () => {
+const SpecialPage: Page = () => {
   return (
     <div>
       <Title>Login</Title>
@@ -103,7 +101,7 @@ const concessionComponent: Page = () => {
           backgroundImage: "url(https://cdn.cgv.id/assets/images/bg-top.png)",
         }}
       >
-        <div className = "flex mr-28 gap-8"> 
+        <div className = "flex mr-28 gap-8">
         <div className="flex w-36 flex-col justify-center">
           <Link href="./">
             <img
@@ -142,10 +140,56 @@ const concessionComponent: Page = () => {
         </div>
       </div>
       </div>
-           
+        {/* ------------------ */}
+      <div
+        className=" h-full flex justify-center bg-repeat-x bg-[#fdfcf0]"
+        
+      >
+        <div className="w-full md:w-8/12 h " style={{}}>
+          <div className="">
+            <section className="flex">
+            
+            </section>
+            <div className="flex">
+              {/* ---- Parent untuk content */}
+              <div
+                className="w-full flex bg-repeat-x mt-2 flex-col" >
+                {/* start code here */}
+                <div className = "flex w-full justify-evenly mb-4 ">
+                <Link href = "../special"><span className = "ms-3">Auditoriums</span></Link>
+                <Link href = "../special/sport"><span className = "ms-3  text-red-500 border-b-4 border-b-red-500 ">Sport</span></Link>
+                </div>
+                <ul className="gap-10 flex flex-col">
+                  <li className = "w-[980px] mx-auto">
+                    <img src="https://cdn.cgv.id/uploads_v2/special_audi/web/thumbnails/2308/SA202308041835362098.jpg" alt="" className = "mx-auto transition-transform transform hover:scale-90 duration-300 ease-in-out" />
+                    <h4 className=" text-[#E71A0F] font-bold">SPORTS HALL FX SUDRIMAN</h4>
+                  </li>
+                  <li className = "w-[980px] mx-auto">
+                    <img src="https://cdn.cgv.id/uploads_v2/special_audi/web/thumbnails/2308/SA202308041834249027.jpg" alt="" className = "mx-auto transition-transform transform hover:scale-90 duration-300 ease-in-out" />
+                    <h4 className=" text-[#E71A0F] font-bold">SPORS HALL TERAS KOTA</h4>
+                  </li>
+                  <li className = "w-[980px] mx-auto">
+                    <img src="https://cdn.cgv.id/uploads_v2/special_audi/web/thumbnails/2308/SA202308041833368000.jpg" alt="" className = "mx-auto transition-transform transform hover:scale-90 duration-300 ease-in-out" />
+                    <h4 className="text-[#E71A0F] font-bold">SPORTS HALL CIPUTRA TANGERANG</h4>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          
+          </div>
+          
+        <div>
+            <div className = " h-44 mt-4">
+            </div>
+        
+        </div>
+        </div>
+      </div>
+        {/* -------------------------------- */}
        
 
-      <div className=" bg-[#fdfcf0] flex flex-col ">
+        <div className=" bg-[#fdfcf0] flex flex-col ">
                 <div className="h-16 w-full flex items-center ">
                     <div className = "items-center flex flex-1 justify-evenly border-t-4 border-t-black  border-b-4 border-b-black">
                     <ul className = "flex gap-3">
@@ -192,23 +236,23 @@ const concessionComponent: Page = () => {
                             About Us
                         </Link>
                         <p className="ms-5 text-sm"> | </p>
-                        <Link href=""  className = "ms-3 text-[#e71a0f] text-sm">
+                        <Link href="/legalTerm"  className = "ms-3 text-[#e71a0f] text-sm">
                             Legal Terms
                         </Link>
                         <p className="ms-5 text-sm" > | </p>
-                        <Link href="" className = "ms-3 text-[#e71a0f] text-sm">
+                        <Link href="/career" className = "ms-3 text-[#e71a0f] text-sm">
                             Careers
                         </Link>
                         <p className="ms-5 text-sm"> | </p>
-                        <Link href="" className = "ms-3 text-[#e71a0f] text-sm" >
+                        <Link href="/feedBack" className = "ms-3 text-[#e71a0f] text-sm" >
                             Feedback
                         </Link>
                         <p className="ms-5 text-sm"> | </p>
-                        <Link href="" className = "ms-3 text-[#e71a0f] text-sm" >
+                        <Link href="/contactUs" className = "ms-3 text-[#e71a0f] text-sm" >
                             Contact Us
                         </Link>
                         <p className="ms-5 text-sm"> | </p>
-                        <Link href="" className = "ms-3 text-[#e71a0f] text-sm" >
+                        <Link href="/investorRelation" className = "ms-3 text-[#e71a0f] text-sm" >
                             Investor Relation
                         </Link>
                     </ul>
@@ -236,4 +280,5 @@ const concessionComponent: Page = () => {
   );
 };
 
-export default concessionComponent;
+export default SpecialPage;
+

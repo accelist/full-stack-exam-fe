@@ -40,31 +40,67 @@ export default function CarouselControlsInside() {
             <li>
               <img
                 src="https://cdn.cgv.id/uploads_v2/movie/compressed/24014600.jpg?version=1"
-                className="m-auto max-h-full w-full max-w-full object-cover" alt="first"
+                className="m-auto max-h-full max-w-full object-cover" alt="first"
               />
             </li>
             <li>
               <img
-                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24014600.jpg?version=1"
-                className="m-auto max-h-full w-full max-w-full" alt="Second"
+                src=" https://cdn.cgv.id/uploads_v2/movie/compressed/24006500.jpg?version=2"
+                className="m-auto max-h-full  max-w-full" alt="Second"
               />
             </li>
             <li>
               <img
-                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24014600.jpg?version=1"
-                className="m-auto max-h-full w-full max-w-full object-cover" alt="Third"
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24013100.jpg?version=1"
+                className="m-auto max-h-full object-cover" alt="Third"
               />
             </li>
             <li>
               <img
-                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24014600.jpg?version=1"
-                className="m-auto max-h-full w-full max-w-full object-cover" alt="Fourth"
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/22024700.jpg?version=1"
+                className="m-auto max-h-full object-cover" alt="Fourth"
               />
             </li>
             <li>
               <img
-                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24014600.jpg?version=1"
-                className="m-auto max-h-full w-full max-w-full object-cover" alt="Fivth"
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24010900.jpg?version=1"
+                className="m-auto max-h-full  object-cover" alt="Fivth"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24011300.jpg?version=1"
+                className="m-auto max-h-full  object-cover" alt="Fivth"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24012800.jpg?version=2"
+                className="m-auto max-h-full  object-cover" alt="Fivth"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24012300.jpg?version=1"
+                className="m-auto max-h-full  object-cover" alt="Fivth"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24011500.jpg?version=2"
+                className="m-auto max-h-full  object-cover" alt="Fivth"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24012100.jpg?version=1"
+                className="m-auto max-h-full  object-cover" alt="Fivth"
+              />
+            </li>
+            <li>
+              <img
+                src="https://cdn.cgv.id/uploads_v2/movie/compressed/24003200.jpg?version=3"
+                className="m-auto max-h-full  object-cover" alt="Fivth"
               />
             </li>
           </ul>

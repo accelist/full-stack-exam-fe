@@ -89,10 +89,10 @@ const moviesComponent: Page = () => {
               />
             </Link>
           </div>
-          <div className="flex items-center gap-16">
-            <Link href="">News</Link>
+          <div className="flex items-center gap-16 font-serif font-bold">
+            <Link href="../news">News</Link>
             <Link href="/user">Login</Link>
-            <Link href="">SignUp</Link>
+            <Link href="/user/register">SignUp</Link>
           </div>
         </div>
       </div>
@@ -102,6 +102,7 @@ const moviesComponent: Page = () => {
           backgroundImage: "url(https://cdn.cgv.id/assets/images/bg-top.png)",
         }}
       >
+        <div className = "flex mr-28 gap-8">
         <div className="flex w-36 flex-col justify-center">
           <Link href="./">
             <img
@@ -139,11 +140,40 @@ const moviesComponent: Page = () => {
           </div>
         </div>
       </div>
+      </div>
+        {/* ============== */}
+        <div
+        className=" h-full flex justify-center bg-repeat-x bg-[#fdfcf0]"
+        style={{
+          backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"
+          // backgroundImage:
+          //   "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)",
+        }}
+      >
+        <div className="w-full md:w-8/12 " >
+          <div className="">
+            <div className="flex">
+              {/* ---- Parent untuk content */}
+              <div
+                className="w-full h-full flex flex-col "  >
+                {/* start code here */}
+                
+                  
+              </div>
+            </div>
+          
+          </div>
+          
+        <div>
+            <div className = " h-44 mt-4">
+            </div>
         
-           
-       
+        </div>
+        </div>
+      </div>
 
-            <div className=" bg-[#fdfcf0] flex flex-col ">
+          {/* ===================== */}
+          <div className=" bg-[#fdfcf0] flex flex-col ">
                 <div className="h-16 w-full flex items-center ">
                     <div className = "items-center flex flex-1 justify-evenly border-t-4 border-t-black  border-b-4 border-b-black">
                     <ul className = "flex gap-3">
@@ -183,37 +213,37 @@ const moviesComponent: Page = () => {
         
                 </div>
                 <div className ="w-4/5 mx-auto">
-                <div className = " h-24 flex flex-col w-full " >
+                <div className = " h-24 flex flex-col w-full gap-3 " >
 
-                <ul className = "flex  mt-3 ">
-                        <Link href="" className = "ms-5" >
+                <ul className = "flex  mt-1 ">
+                        <Link href="/aboutUs" className = "ms-1 text-[#e71a0f] text-sm" >
                             About Us
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href=""  className = "ms-5">
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/legalTerm"  className = "ms-3 text-[#e71a0f] text-sm">
                             Legal Terms
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5">
+                        <p className="ms-5 text-sm" > | </p>
+                        <Link href="/career" className = "ms-3 text-[#e71a0f] text-sm">
                             Careers
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5" >
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/feedBack" className = "ms-3 text-[#e71a0f] text-sm" >
                             Feedback
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5" >
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/contactUs" className = "ms-3 text-[#e71a0f] text-sm" >
                             Contact Us
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5" >
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/investorRelation" className = "ms-3 text-[#e71a0f] text-sm" >
                             Investor Relation
                         </Link>
                     </ul>
                     <div className = "flex h-12 w-full  justify-between ">
-                      <div className = "flex items-center text-center ">
+                      <div className = "flex items-center text-center gap-10 ">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/CGV_logo.svg/1200px-CGV_logo.svg.png" alt="" className ="w-20"/>
-                        <p>COPYRIGHT 2024. CJ CGV All RIGHTS RESERVED.</p>
+                        <h1 className="font-sans text-xs">COPYRIGHT 2024. CJ CGV All RIGHTS RESERVED.</h1>
                         
                       </div>
                       <div className = "flex items-center text-center ">

@@ -103,6 +103,7 @@ const IndexPage: Page = () => {
           backgroundImage: "url(https://cdn.cgv.id/assets/images/bg-top.png)",
         }}
       >
+        <div className = "flex mr-28 gap-8">
         <div className="flex w-36 flex-col justify-center">
           <Link href="./">
             <img
@@ -140,6 +141,7 @@ const IndexPage: Page = () => {
           </div>
         </div>
       </div>
+      </div>
       <div
         className=" h-full flex justify-center bg-repeat-x bg-[#fdfcf0]"
         style={{
@@ -148,22 +150,22 @@ const IndexPage: Page = () => {
           //   "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)",
         }}
       >
-        <div className="w-full md:w-8/12 h " style={{}}>
+        <div className="w-full md:w-8/12" style={{}}>
           <div className="">
-            <section className="flex">
+            <section className="flex w-[720px] mx-auto">
               <Swiper
                 navigation
                 pagination={{ type: "bullets" }}
                 modules={[Navigation, Pagination]}
-                className="h-96 w-full"
+                className="h-[450px]"
               >
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <div className="flex h-full w-full items-center justify-center">
+                    <div className="flex h-full w-full items-center justify-center ">
                       <Image
                         src={image.src}
                         alt={image.alt}
-                        className=" w-full"
+                        className=""
                       />
                     </div>
                   </SwiperSlide>
@@ -172,7 +174,7 @@ const IndexPage: Page = () => {
             </section>
             <div className="flex">
               <div
-                className="w-full flex bg-repeat-x justify-center h-20 mt-16"  
+                className="w-full flex justify-center h-20 mt-3 border-t-4 border-t-black"  
               >
                 <h1 className = "font-extrabold text-2xl">MOVIE SELECTION</h1>
                 
@@ -180,34 +182,31 @@ const IndexPage: Page = () => {
             </div>
               <CarouselControlsInside/>
           </div>
-          <div className=" flex justify-center mt-16 flex-col items-center gap-5 border-t-4 border-t-black">
+          <div className=" flex justify-evenly mt-16 flex-col items-center gap-5 border-t-4 border-t-black w-full ">
             <h1 className = "font-extrabold items-center text-2xl">CGV UPDATE</h1>
-                <ul className = "flex gap-5">
+                <ul className = "flex gap-10 justify-evenly">
                     <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
+                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404291657431685_thumb.jpg" alt="" />
+                    </li>
+                    <li>
+                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2405/PR202405171125514961_thumb.jpg" alt="" />
                     </li>
                     <li>
                         <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
                     </li>
                     <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
-                    </li>
-                    <li>
-                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2404/PR202404151613598999_thumb.jpg" alt="" />
+                        <img src="https://cdn.cgv.id/uploads_v2/promotions/2401/PR202401242010086487_thumb.jpg" alt="" />
                     </li>
                 </ul>
           </div>
         <div>
-            <div className = " h-96 mt-4">
+            <div className = " h-96 mt-10 border-t-4 border-t-black">
             </div>
         
         </div>
         </div>
       </div>
-
+                {/* ---- footer */}
             <div className=" bg-[#fdfcf0] flex flex-col ">
                 <div className="h-16 w-full flex items-center ">
                     <div className = "items-center flex flex-1 justify-evenly border-t-4 border-t-black  border-b-4 border-b-black">
@@ -248,37 +247,37 @@ const IndexPage: Page = () => {
         
                 </div>
                 <div className ="w-4/5 mx-auto">
-                <div className = " h-24 flex flex-col w-full " >
+                <div className = " h-24 flex flex-col w-full gap-3 " >
 
-                <ul className = "flex  mt-3 ">
-                        <Link href="" className = "ms-5" >
+                <ul className = "flex  mt-1 ">
+                <Link href="/aboutUs" className = "ms-1 text-[#e71a0f] text-sm" >
                             About Us
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href=""  className = "ms-5">
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/legalTerm"  className = "ms-3 text-[#e71a0f] text-sm">
                             Legal Terms
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5">
+                        <p className="ms-5 text-sm" > | </p>
+                        <Link href="/career" className = "ms-3 text-[#e71a0f] text-sm">
                             Careers
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5" >
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/feedBack" className = "ms-3 text-[#e71a0f] text-sm" >
                             Feedback
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5" >
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/contactUs" className = "ms-3 text-[#e71a0f] text-sm" >
                             Contact Us
                         </Link>
-                        <p className="ms-5"> | </p>
-                        <Link href="" className = "ms-5" >
+                        <p className="ms-5 text-sm"> | </p>
+                        <Link href="/investorRelation" className = "ms-3 text-[#e71a0f] text-sm" >
                             Investor Relation
                         </Link>
                     </ul>
                     <div className = "flex h-12 w-full  justify-between ">
-                      <div className = "flex items-center text-center ">
+                      <div className = "flex items-center text-center gap-10 ">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/CGV_logo.svg/1200px-CGV_logo.svg.png" alt="" className ="w-20"/>
-                        <h1>COPYRIGHT 2024. CJ CGV All RIGHTS RESERVED.</h1>
+                        <h1 className="font-sans text-xs">COPYRIGHT 2024. CJ CGV All RIGHTS RESERVED.</h1>
                         
                       </div>
                       <div className = "flex items-center text-center ">
@@ -294,8 +293,8 @@ const IndexPage: Page = () => {
 
                  </div>
             </div>
+            {/* ----- footer */}
                     
-    
     </div>
   );
 };
