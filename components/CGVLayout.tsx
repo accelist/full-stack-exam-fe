@@ -108,19 +108,19 @@ const MyLayout: React.FC<{
                     <Link href="/content/about_us">
                         About Us
                     </Link>
-                    <Link href="https://www.cgv.id/en/content/legal_term">
+                    <Link href="/content/legal_term">
                         Legal Terms
                     </Link>
-                    <Link href="https://www.cgv.id/en/content/careers">
+                    <Link href="/content/careers">
                         Careers
                     </Link>
-                    <Link href="https://www.cgv.id/en/content/feedback">
+                    <Link href="/content/feedback">
                         Feedback
                     </Link>
-                    <Link href="https://www.cgv.id/en/content/contact">
+                    <Link href="/content/contact_us">
                         Contact Us
                     </Link>
-                    <Link href="https://www.cgv.id/en/content/investor_relation">
+                    <Link href="/content/investor_relation">
                         Investor Relations
                     </Link>
                 </div>
