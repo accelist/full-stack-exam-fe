@@ -21,6 +21,7 @@
     "pre-commit-check": "tsc && next lint"
   },
   "devDependencies": {
+    "@types/css-modules": "^1.0.5",
     "@types/http-proxy": "^1.17.10",
     "@types/node": "^18.15.11",
     "@types/nprogress": "^0.2.0",
@@ -45,6 +46,7 @@
     "@hookform/error-message": "2.0.1",
     "@hookform/resolvers": "3.0.1",
     "antd": "5.4.0",
+    "axios": "^1.6.8",
     "dayjs": "1.11.7",
     "http-proxy": "1.18.1",
     "jotai": "2.0.3",
