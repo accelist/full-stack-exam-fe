@@ -8,7 +8,7 @@ import { SessionProvider } from 'next-auth/react';
 import { SessionErrorHandler } from '../components/SessionErrorHandler';
 
 // https://fontawesome.com/v5/docs/web/use-with/react#next-js
-import {config} from '@fortawesome/fontawesome-svg-core';
+import {config} from'@fortawesome/fontawesome-svg-core';
 import '../styles/globals.css';
 config.autoAddCss = false;
 

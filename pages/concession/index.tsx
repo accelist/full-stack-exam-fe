@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 const concessionComponent: Page = () => {
   return (
     <div>
-      <Title>Login</Title>
+      <Title>Concession - CGV Cinema</Title>
       <div className="flex-1 flex relative">
         <div
           className=" flex justify-around gap-16 w-full h-10"

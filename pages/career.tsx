@@ -11,7 +11,7 @@ import "swiper/css/scrollbar";
 const CareerPage: Page = () => {
   return (
     <div>
-      <Title>Login</Title>
+      <Title>Careers - CGV Cinema</Title>
       <div className="flex-1 flex relative">
         <div
           className=" flex justify-around gap-16 w-full h-10"
@@ -143,81 +143,112 @@ const CareerPage: Page = () => {
       {/* ----------------- */}
       <div className=" h-full flex justify-center bg-[#fdfcf0]">
         <div className="w-full md:w-8/12  ">
-            <div className="flex">
+            <div className="flex flex-col w-[980px] mx-auto gap-10">
               {/* ---- Parent untuk content */}
               <div className="w-[980px] h-full flex flex-col mt-4 border-4 border-[#E71A0F] p-[20px] mx-auto ">
                 {/* start code here */}
-                <h4 className="font-serif font-semibold">
-                  
-                  TENTANG CJ CGV INDONESIA
+                <h4 className="font-semibold">
+                  WHO ARE WE ?
                 </h4>
                 <br />
                 <h1>
-                  PT. Graha Layar Prima, Tbk juga dikenal sebagai CJ CGV Cinemas
-                  (atau sebelumnya dikenal sebagai Blitz Megaplex) adalah
-                  jaringan bioskop terkemuka di Indonesia yang didirikan pertama
-                  kali pada tahun 2004 dan mengoperasikan bioskop pertamanya di
-                  Paris Van Java, Bandung pada tahun 2006.
+                Welcome to CGV CINEMAS. In CGV CINEMAS the terms of &apos;Auditorium&apos; is what they call &quot;Theatre&quot; somewhere else, and it is where we screen all of our movies on the largest screens in Indonesia. CGV CINEMAS presents the concept of &quot;Cultureplex&quot;, where it brings entertainment by combining film, music, fine dining, and meeting point all in one place: The CGV CINEMAS.
                 </h1>
                 <br />
                 <h1>
-                  CJ CGV memberikan pengalaman menonton lebih menyenangkan
-                  dengan kemajuan teknologi yang digunakan seperti; 3D, 4DX,
-                  Screen X, SphereX, dan Dolby Atmos, melalui beragam pilihan
-                  auditorium yaitu Regular Class, Velvet Class, Gold Class,
-                  Satin Class, Sweetbox, Sky Seat dan Private Box.
+                All of the CGV staffs proudly call themselves &quot;stars&quot; because of their unique differences. The difference lays on the costumer oriented services. Each stars has the fresh and energetic bearings in giving services with warm and genial approaches, so each costumers can truly feel the amazing experience during their visit to CGV CINEMAS. All of these are based on CGV CINEMAS vision, &quot;to be the ultimate choice for the most unforgettable experiences&quot;.
                 </h1>
                 <br />
                 <h1>
-                  Mengusung konsep Cultureplex dimana kami tidak hanya
-                  menyediakan tempat untuk menonton film, CJ CGV* CINEMAS turut
-                  memberi ruang bagi beragam komunitas di sekitar lokasi CGV
-                  untuk melakukan aktivitas kesenian, seperti pertunjukan musik
-                  dan tarian, pertemuan corporate, gathering, dan memberikan
-                  wadah kreasi serta mengekspresikan diri untuk masyarakat
-                  seluruh Indonesia.
+                Based on the vision, CGV CINEMAS is running a mission:
+                </h1>
+                <h1>
+1. to provide the most innovative, fun and enjoyable entertainment experiences to all our customers, and
+
+                </h1>
+                <h1>
+2. to create growth opportunities to all our stakeholders, employees, suppliers and community.
                 </h1>
                 <br />
                 <h1>
-                  Dengan kapasitas layar yang terus bertambah, CJ CGV memutarkan
-                  berbagai macam jenis film dari berbagai Negara seperti India,
-                  Korea, Jepang, Thailand dan tentunya konten lokal dari dalam
-                  negeri. CJ CGV Indonesia menayangkan berbagai pilihan film
-                  dari rumah produksi internasional dan lokal, serta pembuat
-                  film independen dan studio anime. Dengan tayangan dari
-                  berbagai Negara seperti India, Korea, Thailand, Jepang dan
-                  tentunya konten dalam negeri, auditorium CJ CGV juga
-                  dilengkapi dengan teknologi audio visual berkualitas tinggi
-                  dengan hasil resonansi suara yang jernih.
+                Do you have what it takes to be a stars? If you are interested in joining this marvelous team delivering the unforgettable experience in entertainment, fill the form and send it to us.
                 </h1>
                 <br />
                 <h1>
-                  Hingga kini CJ CGV telah mengoperasikan 71 bioskop dan 408
-                  layar yang tersebar di lebih dari 30 kota di seluruh
-                  Indonesia, dan akan terus melebarkan jaringan baru untuk
-                  memperkuat positioning perusahaan dan menjangkau masyarakat
-                  dengan lebih luas.
+                CAREER OPPORTUNITIES
                 </h1>
                 <br />
-                <br />
-                <h1>
-                  Website: www.cgv.id | Facebook: CGV Cinemas Indonesia |
-                </h1>
-                <h1>
-                  Twitter: @CGV_ID | Instagram: @CGV.ID | LINE: CGV Cinemas
-                </h1>
+                <ol className="ml-6 list-upper-alpha font-[600]">
+                <li>
+                Finance & Accounting
+                </li>
+                <li>
+                Purchasing
+                </li>
+                <li>
+                Legal & Compliance
+                </li>
+                <li>
+                IT Management
+                </li>
+                <li>
+                Technical Team
+                </li>
+                <ol className = "list-lower-alpha ms-6 italic">
+                  <li >Movie Engineer Support</li>
+                </ol>
+                <li>
+                Operations
+                </li>
+                <ol className = "list-lower-alpha ms-6 italic">
+                  <li>
+                    Cinema Supevisor
+                  </li>
+                  <li>
+                    Assistant Cinema Manager
+                  </li>
+                  <li>
+                    Operations Accounting
+                  </li>
+                  <li>
+                    Learning and Development
+                  </li>
+                </ol>
+                <li>
+                  Food & Beverages
+                </li>
+                <li>
+                Content & Movie Programming
+                </li>
+                <li>
+                Safety Management
+                </li>
+                <ol className = "italic list-lower-alpha ms-6">
+                  <li>
+                    Hygiene and Sanitation
+                  </li>
+                </ol>
+                <li>Marketing</li>
+                <li>Brand Identity Team</li>
+                <li>Advertising Sales & Planning</li>
+                <li>Site Development</li>
+                <li>Project & Construction</li>
+                <li>Design & Layout</li>
+                <li>Finance & Accounting</li>
+                <li>Human Resources</li>
+              </ol>
               </div>
+            <div className = "flex items-center justify-between">
+                <Link href = "../membership">
+                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
+                </Link>
+                <Link href = "../membership">
+                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
+                </Link>
+                <Link href = "../membership">
+                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
+                </Link>
             </div>
-            <div className = "flex  w-full gap-5 mt-5 ">
-                <Link href = "../membership">
-                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
-                </Link>
-                <Link href = "../membership">
-                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
-                </Link>
-                <Link href = "../membership">
-                <img src=" https://cdn.cgv.id/uploads_v2/marketing/2103/BN202103231718336836.jpg" alt="" className="flex border-4 p-1 border-black" />
-                </Link>
             </div>
           <div>
             <div className=" h-20 mt-4 bg-lime"></div>

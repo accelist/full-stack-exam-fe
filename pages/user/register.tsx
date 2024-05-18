@@ -4,17 +4,27 @@ import { Page } from "@/types/Page";
 import { useState } from "react";
 
 const RegisterPage: Page = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [city, setCity] = useState("");
+  const [cinema, setCinema] = useState("");
 
-  const handleSubmit = () => {
-    console.log("email", email);
-    console.log("password", password);
+
+  const cities = [
+    "Jakarta",
+    "Bandung",
+    "Surabaya",
+    // Add more cities as needed
+  ];
+
+  const cinemas = {
+    Jakarta: ["CGV Grand Indonesia", "CGV Pacific Place"],
+    Bandung: ["CGV Paris Van Java", "CGV 23 Paskal"],
+    Surabaya: ["CGV Marvell City", "CGV BG Junction"],
+    // Add more locations as needed
   };
 
   return (
     <div>
-      <Title>Login</Title>
+      <Title>Registrasi - CGV Cinema</Title>
       <div className="flex-1 flex relative">
         <div
           className=" flex justify-around gap-16 w-full h-10"
@@ -142,8 +152,8 @@ const RegisterPage: Page = () => {
         </div>
       </div>
       </div>
-      <div className="flex w-[810] items-center justify-center  flex-col min-h-[450px] h-[850px] border-t-4" style={{background: "#fdfcf0"}}>
-        <div className="shadow-md px-12 py-12 landscape-form flex flex-col h-[310] w-[980px] relative border-spacing-96" style={{background: "#f0f0e1"}}>
+      <div className="flex items-center justify-center  flex-col min-h-[650px] h-[850px] border-t-4" style={{background: "#fdfcf0"}}>
+        <div className="shadow-md px-12 py-12 landscape-form flex flex-col h-[700px] w-[980px] relative border-spacing-96" style={{background: "#f0f0e1"}}>
           <div className = "h-16 w-28 absolute left-0 top-0 -translate-y-full flex justify-center items-center rounded-t-lg  bg-red-700">
             <Link href="../user" className = "text-white ">Login</Link>  
           </div>
@@ -156,36 +166,54 @@ const RegisterPage: Page = () => {
           </h5>
             <p className = "font-sans">Please provide accurate information so we may identify you at the Box Office.</p>
           </div>
-          <form onSubmit={handleSubmit} className="flex flex-col items-center min-h-[250px] w-[45%] mx-auto">
-            <div className="w-full">
-              <div className="mb-6">
-                <label
-                  htmlFor="email"
-                  className="text-gray-700"
-                ></label>
-                
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="float-center w-full px-3 py-2 rounded-md border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                  style={{ height: "48px", lineHeight: "48px" }}
-                />
+          <form className="flex flex-col h-[540px] min-h-[250px] w-[918px] mt-8">
+            <div className="flex flex-1">
+            <div className="mb-6 flex flex-col space-y-4">
+      <h1>Preferred Cinema</h1>
+      <select
+        id="city"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+        className="float-center w-full px-3 py-2 rounded-md border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+        style={{ height: "48px", lineHeight: "48px" }}
+        required
+      >
+        <option value="" disabled>
+          Select your city
+        </option>
+        {cities.map((city) => (
+          <option key={city} value={city}>
+            {city}
+          </option>
+        ))}
+      </select>
+
+      <select
+        id="cinema"
+        value={cinema}
+        onChange={(e) => setCinema(e.target.value)}
+        className="float-center w-full px-3 py-2 rounded-md border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+        style={{ height: "48px", lineHeight: "48px" }}
+        required
+        disabled={!city}
+      >
+        <option value="" disabled>
+          Select your preferred cinema
+        </option>
+        {city &&
+          cinemas[city].map((cinema) => (
+            <option key={cinema} value={cinema}>
+              {cinema}
+            </option>
+          ))}
+      </select>
+    </div>
+              <div>
+
               </div>
             </div>
             <div className="w-full">
-              {/* Removed md:w-1/2 md:pl-2 to make the input full width */}
               <div className="mb-6">
-                <input
-                  type="password"
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter password..."
-                  className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                />
               </div>
             </div>
             <div className="w-full">

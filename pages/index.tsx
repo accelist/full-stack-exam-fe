@@ -16,7 +16,7 @@ import CarouselControlsInside from "@/components/carousel";
 const IndexPage: Page = () => {
   return (
     <div>
-      <Title>Home</Title>
+      <Title>No. 1 Cultureplex in Indonesia - CGV Cinema</Title>
       <div className="flex-1 flex relative" style ={{backgroundImage: "url(https://cdn.cgv.id/assets/images/bg_c_bricks.png)"}}>
         <div className=" flex justify-around gap-16  w-full h-10 bg-[#fdfcf0]">
           <div className="flex gap-3 items-center">

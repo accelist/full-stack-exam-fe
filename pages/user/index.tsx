@@ -29,7 +29,7 @@ const LoginPage: Page = () => {
 
   return (
     <div>
-      <Title>Login</Title>
+      <Title>Masuk ke Akun CGV Cinemas - CGV Cinema</Title>
       <div className="flex-1 flex relative">
         <div
           className="flex justify-around gap-16 w-full h-10"
@@ -196,6 +196,7 @@ const LoginPage: Page = () => {
                   {...register("email")}
                   className="float-center w-full px-3 py-2 rounded-md border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                   style={{ height: "48px", lineHeight: "48px" }}
+                  required
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">
@@ -212,6 +213,7 @@ const LoginPage: Page = () => {
                   placeholder="Enter password..."
                   {...register("password")}
                   className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                  required
                 />
                 {errors.password && (
                   <p className="text-red-500 text-sm mt-1">

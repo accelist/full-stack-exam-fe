@@ -11,7 +11,7 @@ import "swiper/css/scrollbar";
 const SpecialPage: Page = () => {
   return (
     <div>
-      <Title>Login</Title>
+      <Title>Auditorium Special CGV Cinemas - CGV Cinema</Title>
       <div className="flex-1 flex relative">
         <div
           className=" flex justify-around gap-16 w-full h-10"

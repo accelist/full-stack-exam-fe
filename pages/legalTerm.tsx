@@ -11,7 +11,7 @@ import "swiper/css/scrollbar";
 const legalTermPage: Page = () => {
   return (
     <div>
-      <Title>kmkms</Title>
+      <Title>Legal Terms - CGV Cinema</Title>
       <div className="flex-1 flex relative">
         <div
           className=" flex justify-around gap-16 w-full h-10"

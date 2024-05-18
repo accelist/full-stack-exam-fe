@@ -11,7 +11,7 @@ import "swiper/css/scrollbar";
 const feedBackPage: Page = () => {
   return (
     <div>
-      <Title>Login</Title>
+      <Title>Feedback - CGV Cinema</Title>
       <div className="flex-1 flex relative">
         <div
           className=" flex justify-around gap-16 w-full h-10"
@@ -148,11 +148,11 @@ const feedBackPage: Page = () => {
             <div className="w-[980px] h-full flex flex-col mt-4 border-4 border-[#E71A0F] p-[20px] mx-auto ">
               {/* start code here */}
               <h4 className="font-semibold">
-                Feedback 🙏:
+                Feedback:
               </h4>
               <br />
               <h1 className="mt-2 font-extralight">
-                Call CenterYou can leave comments or feedback to our service by directly email us at support@cgv.id. We value every feedback we received. And once in a while will have promotionnal gift to our eager customer. Grateful for every seconds you give us thoughts!
+                You can leave comments or feedback to our service by directly email us at support@cgv.id. We value every feedback we received. And once in a while will have promotionnal gift to our eager customer. Grateful for every seconds you give us thoughts!
               </h1>
             </div>
             <div className="flex items-center justify-between mt-5 gap-10">
