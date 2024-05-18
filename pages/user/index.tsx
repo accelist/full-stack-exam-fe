@@ -5,7 +5,6 @@ import * as z from "zod";
 import { Title } from "@/components/Title";
 import { Page } from "@/types/Page";
 
-// Define the schema using zod
 const loginSchema = z.object({
   email: z.string().min(1, "Email is required").email("Invalid email address"),
   password: z.string().min(1, "Password is required"),
