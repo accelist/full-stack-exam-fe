@@ -72,6 +72,9 @@ const Navbar: React.FC = () => {
                     <li>
                       <button onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 mx-auto">Sign out</button>
                     </li>
+                    <li>
+              <Link href="/history" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 mx-auto text-center">History</Link>
+            </li>
                   </ul>
                 </div>
               )}
